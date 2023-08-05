@@ -105,17 +105,17 @@ function deleteTask(taskId){
     if((typeof taskId  !='string') ||!taskId){
         return
     }
-    let newTaskList=[];
+    
+    console.log(taskId)
     for(let i=0;i<taskList.length;i++){
-        if(taskList[i].id !==taskId){
+        if(taskList[i].id ==taskId){
             //Delete by splice......
-            taskList=taskList.splice(i,1);
+            taskList.splice(i,1);
         
             console.log('deleted by splice');
     }
 
     }
-    taskList=newTaskList;
     renderTasks();
 }
 
